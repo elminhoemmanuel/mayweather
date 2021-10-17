@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import "./mixins";
+@import "./variables";
+
+
+html,
+body {
+  padding: 0;
+  margin: 0 auto;
+  font-family: 'Poppins', sans-serif;
+  width: 100%;
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+
+// for drawer
+.ant-drawer-body{
+  padding: 0 !important;
+}
+
+// for tabs
+.ant-tabs-nav{
+  margin-bottom: 0 !important;
+}
+
+.site-layout{
+  width: 100% !important;
+}
+
+// styles for horizontal card
+.pic-box{
+  width: 5%;
+}
+
+.text-box{
+  width: 95%;
+}
+
+// report buttons on dashboard
+.report-btn{
+  background: black !important;
+  color: white !important;
+  padding-top: 6px !important;
+  padding-top: 6px !important;
+}
+
+@media screen and (max-width: 767px){
+  .pic-box{
+    width: 100%;
+  }
+  
+  .text-box{
+    width: 100%;
+  }
+}
