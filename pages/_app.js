@@ -11,14 +11,12 @@ import 'antd/dist/antd.less';
 
 function MyApp({ Component, pageProps }) {
 
-  // Use the layout defined at the page level, if available
-  const getLayout = Component.getLayout || ((page) => page)
 
   return (
     <React.Fragment>
       <Provider store={store}>
         <PersistGate loading={null} persistor={persistor}>
-            {getLayout(<Component {...pageProps} />)}
+          <Component {...pageProps} />
         </PersistGate>
       </Provider>
     </React.Fragment>

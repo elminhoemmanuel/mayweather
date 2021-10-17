@@ -6,13 +6,13 @@ export default function Home() {
   return (
     <div >
       <Head>
-        <title>Aneeque marketplace</title>
-        <meta name="description" content="Aneeque marketplace" />
+        <title>Mayweather</title>
+        <meta name="description" content="Mayweather" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <div>
-        Home where login will be eventually when there is a design.
+        Home Page yo.
       </div>
       
     </div>
