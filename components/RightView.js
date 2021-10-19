@@ -72,13 +72,7 @@ const RightView = () => {
                                 <span className="absolute top-0 right-0 text-xs">100</span>
                             </div>
                             <ProgressBar bgcolor="#FFEC65" completed={84} />
-                            {/* <NextNprogress
-                                color="#FFEC65"
-                                startPosition={0.8}
-                                stopDelayMs={200}
-                                height={4}
-                                showOnShallow={true}
-                            /> */}
+                            
                             <div className="relative w-full p-2">
                                 <span className="absolute top-0 right-0 text-xs">%</span>
                             </div>

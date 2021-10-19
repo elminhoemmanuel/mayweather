@@ -1,2 +1,2 @@
 // testing
-export const TEST = "TEST"
+export const TOGGLE_SEARCH = "TOGGLE_SEARCH"

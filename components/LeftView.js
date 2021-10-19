@@ -2,8 +2,13 @@ import React from 'react'
 import PrimaryBtn from './PrimaryBtn'
 import { IoMdLocate } from "react-icons/io"
 import RoundBtn from './RoundBtn'
+import { useDispatch, useSelector } from 'react-redux'
+import { TOGGLE_SEARCH } from "../redux/actions/types"
 
 const LeftView = () => {
+
+    const dispatch = useDispatch()
+
     return (
         <div className="w-full h-full pt-6 pb-8 px-6 weatherbox relative">
             <div className="absolute top-20">
@@ -14,7 +19,7 @@ const LeftView = () => {
                 <PrimaryBtn
                     btnText="Search for places"
                     addStyle="bg-bgbtn text-maytext hover:bg-gray-600"
-                    clicked={() => { }}
+                    clicked={() => { dispatch({type:TOGGLE_SEARCH}) }}
                 />
 
                 <RoundBtn
