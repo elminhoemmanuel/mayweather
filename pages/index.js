@@ -1,14 +1,22 @@
+import React , {useEffect} from "react"
 import Head from 'next/head'
 import Image from 'next/image'
 import LeftView from '../components/LeftView'
 import RightView from '../components/RightView'
 import SideBar from '../components/SideBar'
 import { useDispatch, useSelector } from 'react-redux'
+import { SET_SEARCH } from '../redux/actions/types'
 
 
 export default function Home() {
 
   const { showSearch } = useSelector(state => state.search)
+  const dispatch = useDispatch()
+  console.log(showSearch);
+
+  useEffect(() => {
+    dispatch({ type: SET_SEARCH })
+  }, [])
 
   return (
     <div >

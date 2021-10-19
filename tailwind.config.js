@@ -15,8 +15,8 @@ module.exports = {
         maytext:"#E7E7EB",
         textleft:"#88869D",
         mayyellow:"#FFEC65",
-
-        
+        inputtext:"#616475",
+        btnblue:"#3C47E9",
       }
     },
 
