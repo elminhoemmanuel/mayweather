@@ -1,4 +1,4 @@
-import { TOGGLE_SEARCH } from "../actions/types"
+import { TOGGLE_SEARCH, SET_SEARCH } from "../actions/types"
 
 const initState = {
     showSearch: false
@@ -10,6 +10,12 @@ export const searchReducer = (state=initState,action) => {
             return {
                 ...state,
                 showSearch: !state.showSearch
+            }
+        
+        case SET_SEARCH:
+            return {
+                ...state,
+                showSearch: false
             }
         
         default:
