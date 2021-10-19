@@ -87,10 +87,6 @@ const RightView = () => {
                             <span className="font-bold text-4xl text-maytext">6,4</span>
                             <span className="text-2xl text-maytext">miles</span>
                         </h1>
-
-                        <div className="flex items-center">
-
-                        </div>
                     </div>
 
                     {/* air pressure */}
@@ -101,10 +97,6 @@ const RightView = () => {
                             <span className="font-bold text-4xl text-maytext">998</span>
                             <span className="text-2xl text-maytext">mb</span>
                         </h1>
-
-                        <div className="flex items-center">
-
-                        </div>
                     </div>
                 </div>
 
