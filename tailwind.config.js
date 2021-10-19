@@ -9,11 +9,14 @@ module.exports = {
         'hero-bg': "url('/images/farmhero.jpg')",
       }),
       colors: {
-        aneeque:"#6B002C",
-        sidebg:"#1A1919",
-        text:"#2D2D2D",
-        textlight:"#797979",
-        mainbg: "#E5E5E5",
+        bgblack:"#100E1D",
+        bggray:"#1E213A",
+        bgbtn:"#6E707A",
+        maytext:"#E7E7EB",
+        textleft:"#88869D",
+        mayyellow:"#FFEC65",
+
+        
       }
     },
 
@@ -27,7 +30,7 @@ module.exports = {
       'md': '768px',
       // => @media (min-width: 768px) { ... }
 
-      'lg': '1024px',
+      'lg': '1025px',
       // => @media (min-width: 1024px) { ... }
 
       'xl': '1280px',

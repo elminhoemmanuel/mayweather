@@ -1,18 +1,37 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import { Button, Space, DatePicker, Card } from 'antd';
+import LeftView from '../components/LeftView'
+import RightView from '../components/RightView'
+import SideBar from '../components/SideBar'
+import { useDispatch, useSelector } from 'react-redux'
+
 
 export default function Home() {
+
+  const { showSearch } = useSelector(state => state.search)
+
   return (
     <div >
       <Head>
-        <title>Aneeque marketplace</title>
-        <meta name="description" content="Aneeque marketplace" />
+        <title>Mayweather</title>
+        <meta name="description" content="Weather display App" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div>
-        Home where login will be eventually when there is a design.
+      <div className="relative ml-0 md:ml-72 lg:ml-80">
+
+        {/* left slider search box */}
+        { showSearch && <SideBar />}
+
+        {/* left bar on homepgae */}
+        <div className="relative md:fixed top-0 left-0 md:w-72 lg:w-80 h-auto md:h-screen bg-bggray z-10">
+          <LeftView />
+        </div>
+
+        {/* right main homepage section */}
+        <div className="">
+          <RightView />
+        </div>
       </div>
       
     </div>

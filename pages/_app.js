@@ -7,18 +7,16 @@ import { store } from '../redux/store';
 import { createWrapper } from 'next-redux-wrapper';
 import { PersistGate } from 'redux-persist/integration/react'
 import { persistor } from './../redux/store';
-import 'antd/dist/antd.less';
+import NextNprogress from 'nextjs-progressbar';
 
 function MyApp({ Component, pageProps }) {
 
-  // Use the layout defined at the page level, if available
-  const getLayout = Component.getLayout || ((page) => page)
 
   return (
     <React.Fragment>
       <Provider store={store}>
         <PersistGate loading={null} persistor={persistor}>
-            {getLayout(<Component {...pageProps} />)}
+          <Component {...pageProps} />
         </PersistGate>
       </Provider>
     </React.Fragment>

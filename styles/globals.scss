@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -10,8 +10,9 @@ html,
 body {
   padding: 0;
   margin: 0 auto;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Raleway', sans-serif;
   width: 100%;
+  background: #100E1D;
 }
 
 
@@ -19,44 +20,61 @@ body {
   box-sizing: border-box;
 }
 
-
-// for drawer
-.ant-drawer-body{
-  padding: 0 !important;
+// styles to position background cloud image on left hand box
+.cloudimg{
+    opacity: 0.038;
+    z-index: -10;
 }
 
-// for tabs
-.ant-tabs-nav{
-  margin-bottom: 0 !important;
-}
-
-.site-layout{
-  width: 100% !important;
-}
-
-// styles for horizontal card
-.pic-box{
-  width: 5%;
-}
-
-.text-box{
-  width: 95%;
-}
-
-// report buttons on dashboard
-.report-btn{
-  background: black !important;
-  color: white !important;
-  padding-top: 6px !important;
-  padding-top: 6px !important;
-}
-
-@media screen and (max-width: 767px){
-  .pic-box{
-    width: 100%;
+// Styles for progress bar
+  .progress-bar {
+      position: relative;
+      height: 8px;
+      width: 200px;
+      border-radius: 50px;
+      border: 1px solid #333;
+      background-color: white !important;
   }
   
-  .text-box{
-    width: 100%;
+  .filler {
+      background: #FFEC65;
+      height: 100%;
+      border-radius: inherit;
+      transition: width .2s ease-in;
   }
+
+  // styles for animation of SideBar
+  .slide-in-left {
+    -webkit-animation: slide-in-left 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s both;
+	  animation: slide-in-left 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s both;
+  }
+
+  @-webkit-keyframes slide-in-left {
+    0% {
+      -webkit-transform: translateX(-1000px);
+              transform: translateX(-1000px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  @keyframes slide-in-left {
+    0% {
+      -webkit-transform: translateX(-1000px);
+              transform: translateX(-1000px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+
+@media screen and (max-width: 767px){
+  
 }
