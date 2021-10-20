@@ -2,7 +2,7 @@ import React from 'react'
 
 const PrimaryBtn = ({ btnText , clicked, addStyle}) => {
     return (
-        <button onClick={clicked} className={`focus:outline-none text-sm block shadow p-2 ${addStyle}`}>
+        <button onClick={clicked} className={`focus:outline-none text-sm shadow ${addStyle}`}>
             {btnText}
         </button>
     )
