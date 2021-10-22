@@ -8,7 +8,7 @@ export const fetchDefault = () => (dispatch) => {
     dispatch({ type: RESET_ERROR })
     dispatch({ type: START_FETCH })
 
-    axios.get('https://www.metaweather.com/api/location/1528488/')
+    axios.get('https://cors-anywhere.herokuapp.com/https://www.metaweather.com/api/location/1528488/')
         .then((response) => {
             console.log(response.data);
             dispatch({ type: SET_DEFAULT, payload:response.data })

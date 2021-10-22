@@ -11,7 +11,7 @@ export const search = (value) => (dispatch) => {
     dispatch({ type: RESET_NOT_FOUND })
     dispatch({ type: START_SEARCH })
 
-    axios.get(`https://www.metaweather.com/api/location/search/?query=${value}`)
+    axios.get(`https://cors-anywhere.herokuapp.com/https://www.metaweather.com/api/location/search/?query=${value}`)
         .then((response) => {
             console.log(response.data);
 
@@ -22,7 +22,7 @@ export const search = (value) => (dispatch) => {
 
             } else{
 
-                axios.get(`https://www.metaweather.com/api/location/${response.data[0].woeid}/`)
+                axios.get(`https://cors-anywhere.herokuapp.com/https://www.metaweather.com/api/location/${response.data[0].woeid}/`)
                 .then((response) => {
                     console.log(response.data);
                     dispatch({ type: SET_DEFAULT, payload: response.data })

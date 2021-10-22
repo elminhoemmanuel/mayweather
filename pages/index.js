@@ -59,7 +59,7 @@ export default function Home() {
                         </div>
                     </div> :
 
-                    <div className="flex items-center justify-center py-24">
+                    <div className="flex items-center justify-center py-24 px-6">
                       <p className="text-maytext">{error}</p>
                     </div>
                 }
